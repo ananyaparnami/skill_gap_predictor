@@ -458,7 +458,6 @@ def render_urgency_badge(text, color_type):
     </div>
     """
 
-# ----------------- SESSION AUTH -----------------
 if "logged_in" not in st.session_state:
     st.session_state.logged_in = False
     st.session_state.username = ""
@@ -469,7 +468,6 @@ if "selected_skills_list" not in st.session_state:
         "Data Cleaning", "Excel", "Exploratory Data Analysis", "Power BI", "SQL", "Statistics", "OpenCV"
     ]
 
-# ----------------- LOGIN / SIGNUP VIEW -----------------
 if not st.session_state.logged_in:
     st.write("")
     st.markdown("""
@@ -481,36 +479,7 @@ if not st.session_state.logged_in:
         <h1 style="text-align: center; font-size: 2.5rem; font-weight: 800; color: #1e1b4b; margin-bottom: 6px;">
             Future Skill Gap Predictor
         </h1>
-        <p style="text-align: center; color: #4c1d95; font-size: 15px; font-weight: 700; margin-bottom: 25px;">
-            NLP TF-IDF Vector Architecture & 5-Fold Stratified Random Forest Diagnostic Core
-        </p>
     """, unsafe_allow_html=True)
-    
-    f1, f2, f3 = st.columns(3)
-    with f1:
-        st.markdown("""
-        <div class="feature-card-3d">
-            <div style="color: #6d28d9; font-weight: 800; font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.8px;">MODULE 01</div>
-            <div style="color: #1e1b4b; font-weight: 800; font-size: 16px; margin-top: 4px;">3D Vector Skill Space</div>
-            <div style="color: #4c1d95; font-size: 13px; font-weight: 600; margin-top: 3px;">Multi-Axis Competency Geometry</div>
-        </div>
-        """, unsafe_allow_html=True)
-    with f2:
-        st.markdown("""
-        <div class="feature-card-3d">
-            <div style="color: #6d28d9; font-weight: 800; font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.8px;">MODULE 02</div>
-            <div style="color: #1e1b4b; font-weight: 800; font-size: 16px; margin-top: 4px;">Supervised ML Core</div>
-            <div style="color: #4c1d95; font-size: 13px; font-weight: 600; margin-top: 3px;">Validated Cross-Val Accuracy</div>
-        </div>
-        """, unsafe_allow_html=True)
-    with f3:
-        st.markdown("""
-        <div class="feature-card-3d">
-            <div style="color: #6d28d9; font-weight: 800; font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.8px;">MODULE 03</div>
-            <div style="color: #1e1b4b; font-weight: 800; font-size: 16px; margin-top: 4px;">ATS Parser Engine</div>
-            <div style="color: #4c1d95; font-size: 13px; font-weight: 600; margin-top: 3px;">Automated Resume Tokenizer</div>
-        </div>
-        """, unsafe_allow_html=True)
         
     st.write("")
     col_l1, col_l2, col_l3 = st.columns([1, 1.8, 1])
